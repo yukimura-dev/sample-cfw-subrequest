@@ -1,0 +1,15 @@
+name = "test-cfw-subrequest"
+compatibility_date = "2023-12-18"
+# ServiceBinding経由のアクセスを禁止したい場合は、workers.devドメインのルートを無効化する
+workers_dev = false
+
+[vars]
+# R2バケット内のテスト用ファイルのパスを指定
+R2_TEST_FILE_KEY = "test.txt"
+# テスト用のURLを設定
+FETCH_TEST_ENDPOINT_PATH = "https://example.com/"
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "test-bucket"
+preview_bucket_name = "test-bucket"

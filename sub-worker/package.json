@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler deploy --minify src/index.ts",
+    "check:lint": "eslint src --ext ts,js --report-unused-disable-directives --max-warnings 0",
+    "check:type": "tsc --noEmit",
+    "check:format": "prettier --check '**/src/**/*.{ts,js}'",
+    "check:all": "pnpm check:lint && pnpm check:type && pnpm check:format",
+    "fix:lint": "pnpm check:lint --fix",
+    "fix:format": "prettier --write '**/src/**/*.{ts,js}'",
+    "fix:all": "pnpm fix:lint && pnpm fix:format"
+  },
+  "dependencies": {
+    "hono": "^4.0.9"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240208.0",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-simple-import-sort": "^12.0.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3",
+    "wrangler": "^3.25.0"
+  }
+}
