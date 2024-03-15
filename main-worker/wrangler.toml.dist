@@ -1,4 +1,5 @@
 name = "test-cfw-subrequest"
 compatibility_date = "2023-12-18"
+services = [
   { binding = "SUB_SERVICE", service = "test-cfw-subrequest-sub" }
 ]
