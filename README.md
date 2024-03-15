@@ -1,4 +1,4 @@
-# test-cfw-subrequest
+# sample-cfw-subrequest
 
 - CloudFlare Workersのサブリクエスト制限を確認するためのサンプルコードです。以下の2つのパターンをテストできます。
   - R2バケット内のオブジェクトへのサブリクエスト (`object->get()`)
